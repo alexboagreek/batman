@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="16X16" href="assets/img/batman.png">
     <title>Batman</title>
 </head>
 <body>
-    
+    <header class="header">
+        <nav class="header__navigation navigation">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a class="navigation__link">Главная</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="pages/video.html" class="navigation__link">Видео</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="pages/photo.html" class="navigation__link">Фото</a>
+                </li>
+            </ul>
+            <p class="navigation__hashtag">#TheBatman</p>
+
+            <ul class="header__social social">
+                <li class="social__item">
+                    <a href="#" class="social__link">fb</a>
+                </li>             
+                <li class="social__item">
+                    <a href="#" class="social__link">tw</a>
+                </li>
+                <li class="social__item">
+                    <a href="#" class="social__link">int</a>
+                </li>
+            </ul>
+        </nav>
+            <div class="mute">
+                <input class="mute__checkbox" type="checkbox" id="mute">
+                <label for="mute" class="mute__label">mute</label>
+            </div>
+    </header>
+    <main class="main">
+        <img src="/assets/img/main-batman.png" alt="Логотип к фильму Batman" class="logo" width="329" height="235">
+    </main>
+    <footer class="footer">
+        <ul class="footer__links">
+            <li><a href="#" class="footer__link">Политика конфиденциальности</a></li>
+            <li><a href="#" class="footer__link">Условия эксплуатации</a></li>
+            <li><a href="#" class="footer__link">Выбор объявлений</a></li>
+            <li><a href="#" class="footer__link">Настройки файлов cookie</a></li>
+        </ul>
+        <p class="footer__copyright">© 2022 WBEI TM & © DC</p>
+    </footer>
 </body>
 </html>
