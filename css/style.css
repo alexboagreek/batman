@@ -184,6 +184,14 @@ h1,h2,h3, p {
     background-size: cover;
     padding-left: 180px;
 }
+.logo {
+    animation: zoomIn 1s;
+}
+@keyframes zoomIn {
+    from {
+        transform:  scale3d(0, 0, 0);
+    }
+}
 
 .footer {
     padding: 10px 0;
@@ -203,4 +211,109 @@ h1,h2,h3, p {
 
 .footer__copyright {
     color: #6A6A6A;
+}
+
+@media (max-width: 1024px) {
+    .mute {
+        margin-right: 20px;
+    }
+    .main_index {
+        padding-left: 60px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .burger {
+        display: block;
+        width: 20px;
+        height: 12px;
+        background-color: transparent;
+        background-image: url('../assets/img/menu.svg');
+        border: none;
+    }
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 240px;
+        background-color: #260707;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 90px;
+        text-align: center;
+        align-items: stretch;
+        transform: translateX(-240px);
+        transition: transform 0.5s ease-in-out;
+    }
+    .navigation_active {
+        transform: translateX(0);
+    }
+    .navigation__list {
+        flex-direction: column;
+        margin-right: 0;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+    .navigation__link {
+        padding: 12px 0;
+    }
+    .navigation__hashtag {
+        margin-right: 0px;
+        margin-bottom: 40px;
+    }
+    .navigation__close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 16px;
+        height: 16px;
+        background-image: url('../assets/img/close.svg');
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .social {
+        justify-content: center;
+    }
+    .main_index {
+        padding-left: 30px;
+    }
+    .logo {
+        width: 230px;
+    }
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 580px) {
+
+        .main_index {
+            align-items: flex-end;
+            justify-content: center;
+            padding-left: 0;
+            padding-bottom: 64px;
+            background-image: linear-gradient(
+                0.11deg,
+                rgba(0, 0, 0, 0.76) 32.14%,
+                rgba(255, 0, 0, 0) 72.56%
+              ), url('../assets/img/media-hero.jpg');
+        }
+        .logo {
+            width: 125px;
+        }
+        .footer {
+            font-size: 6px;
+            line-height: 7px;
+        }
 }
