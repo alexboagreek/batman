@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="16X16" href="assets/img/batman.png">
+    <link rel="icon" type="image/png" sizes="16X16" href="../assets/img/batman.png">
+    <link rel="stylesheet" href="../css/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../js/swiper-bundle.min.js"></script>
+    <script defer src="../js/script.js"></script>
     <title>Batman</title>
 </head>
 <body>
@@ -43,8 +46,46 @@
                 <label for="mute" class="mute__label"></label>
             </div>
     </header>
-    <main class="main main_index">
-        <img src="../assets/img/main-batman.png" alt="Логотип к фильму Batman" class="logo" width="329" height="235">
+    <main class="main main_slider">
+        <div class="slider-main swiper">
+            <ul class="slider-main__list swiper-wrapper">
+                <li class="slider-main__item swiper-slide">
+                    <video class="slider-main__video" controls poster="../assets/video/trailer01.jpg">
+                        <source src="../assets/video/trailer01.webm" type="video/webm">
+                        <source src="../assets/video/trailer01.mp4" type="video/mp4">
+                    </video>
+                </li>
+                <li class="slider-main__item swiper-slide">
+                    <video class="slider-main__video" controls poster="../assets/video/trailer02.jpg">
+                        <source src="../assets/video/trailer02.webm" type="video/webm">
+                        <source src="../assets/video/trailer02.mp4" type="video/mp4">
+                    </video>
+                </li>
+                <li class="slider-main__item swiper-slide">
+                    <video class="slider-main__video" controls poster="../assets/video/trailer03.jpg">
+                        <source src="../assets/video/trailer03.webm" type="video/webm">
+                        <source src="../assets/video/trailer03.mp4" type="video/mp4">
+                    </video>
+                </li>
+            </ul>
+        </div>
+        <div class="pagination">
+            <button class="pagination__arrow"></button>
+            <div class="slider-thumbs swiper">
+                <ul class="slider-thumbs__list swiper-wrapper">
+                    <li class="slider-thumbs__item swiper-slide">
+                        <img src="/assets/video/trailer01.jpg" alt="превью к video | video-preview" class="slider-thumbs__img" width="260" height="100">
+                    </li>
+                    <li class="slider-thumbs__item swiper-slide">
+                        <img src="/assets/video/trailer02.jpg" alt="превью к video | video-preview" class="slider-thumbs__img" width="260" height="100">
+                    </li>
+                    <li class="slider-thumbs__item swiper-slide">
+                        <img src="/assets/video/trailer03.jpg" alt="превью к video | video-preview" class="slider-thumbs__img" width="260" height="100">
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
     </main>
     <footer class="footer">
         <ul class="footer__links">
