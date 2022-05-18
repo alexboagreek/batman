@@ -1,4 +1,29 @@
-const sliderThumbs = new Swiper('.slider-thumbs', {
+const burger = document.querySelector('.burger');
+const navigation = document.querySelector('.navigation');
+const close = document.querySelector('.navigation__close');
+
+burger.addEventListener('click', () => {
+    navigation.classList.add('navigation_active');
+});
+
+close.addEventListener('click', () => {
+    navigation.classList.remove('navigation_active');
+});
+
+const mute = document.querySelector('.mute__checkbox');
+const audio = new Audio('../assets/audio/waterTower.mp3');
+
+mute.addEventListener('change', () => {
+    if(mute.checked) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+});
+
+
+try {
+    const sliderThumbs = new Swiper('.slider-thumbs', {
     loop: true,
     spaceBetween: 20,
     slidesPerView: 3,
@@ -20,3 +45,6 @@ const sliderMain = new Swiper('.slider-main', {
 
 sliderThumbs.controller.control = sliderMain;
 sliderMain.controller.control = sliderThumbs;
+} catch {
+    console.log('На данной странице нет слайдера')
+}

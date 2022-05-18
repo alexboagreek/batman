@@ -40,7 +40,6 @@ body {
 img {
     max-width: 100%;
     height: auto;
-    object-fit: cover;
 }
 
 button {
@@ -196,7 +195,7 @@ h1,h2,h3, p {
 }
 
 .footer {
-    height: 70px;
+    height: 50px;
     position: relative;
     z-index: 500;
     padding: 10px 0;
@@ -218,7 +217,7 @@ h1,h2,h3, p {
     color: #6A6A6A;
 }
 .main_slider {
-    height: calc(100% - 120px);
+    height: calc(100% - 100px);
 }
 .slider-main {
     height: 100%;
@@ -307,6 +306,7 @@ h1,h2,h3, p {
         align-items: stretch;
         transform: translateX(-240px);
         transition: transform 0.5s ease-in-out;
+        z-index: 600;
     }
     .navigation_active {
         transform: translateX(0);
