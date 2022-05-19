@@ -19,7 +19,9 @@ try {
     const checkMute = () => {
         
         if(mute.checked) {
-            audio.play();
+            audio.play().catch(() => {
+                mute.checked = false;
+            });
         } else {
             audio.pause();
         }
@@ -69,11 +71,12 @@ try {
         }
     });
 
+    const pagination = document.querySelector('.pagination');
+    const paginationButton = document.querySelector('.pagination__arrow');
 
-
-
-
-
+    paginationButton.addEventListener('click', () => {
+        pagination.classList.toggle('pagination_active');
+    })
 
 } catch {
     console.log('На данной странице нет слайдера');
