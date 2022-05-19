@@ -399,10 +399,10 @@ h1,h2,h3, p {
             font-size: 6px;
             line-height: 7px;
         }
-        .pagination__arrow {
+        /* .pagination__arrow {
             padding-top: 10px;
             margin-bottom: 6px;
-        }
+        } */
         .pagination {
             min-height: 80px;
         }
