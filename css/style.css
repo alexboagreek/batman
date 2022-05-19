@@ -227,6 +227,11 @@ h1,h2,h3, p {
     align-items: center;
     justify-content: center;
 }
+.slider-main__video {
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+}
 .pagination {
     position: absolute;
     bottom: 0;
@@ -380,4 +385,10 @@ h1,h2,h3, p {
         .pagination {
             min-height: 80px;
         }
+}
+
+@media (max-width: 580px) {
+    .mute {
+        margin-right: -78px;
+    }
 }

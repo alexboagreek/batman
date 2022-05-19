@@ -10,16 +10,31 @@ close.addEventListener('click', () => {
     navigation.classList.remove('navigation_active');
 });
 
-const mute = document.querySelector('.mute__checkbox');
-const audio = new Audio('../assets/audio/waterTower.mp3');
 
-mute.addEventListener('change', () => {
-    if(mute.checked) {
-        audio.play();
-    } else {
-        audio.pause();
+try {
+
+    const mute = document.querySelector('.mute__checkbox');
+    const audio = new Audio('../assets/audio/waterTower.mp3');
+    
+    const checkMute = () => {
+        
+        if(mute.checked) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    };
+
+    if (mute) {
+        setTimeout(checkMute, 2000)
     }
-});
+
+    mute.addEventListener('change', checkMute);
+
+} catch {
+    console.log('На данной странице нет музыки');
+}
+
 
 
 try {
@@ -30,21 +45,36 @@ try {
     centeredSlides: true,
     loopedSlides: 4,
 
-});
+    });
 
-sliderThumbs.on('click', (swiper) => {
-    swiper.slideTo(swiper.clickedIndex)
-});
+    sliderThumbs.on('click', (swiper) => {
+        swiper.slideTo(swiper.clickedIndex)
+    });
 
-const sliderMain = new Swiper('.slider-main', {
-    loop: true,
-    spaceBetween: 10,
-    loopedSlides: 4,
-    
-});
+    const sliderMain = new Swiper('.slider-main', {
+        loop: true,
+        spaceBetween: 10,
+        loopedSlides: 4,
+        
+    });
 
-sliderThumbs.controller.control = sliderMain;
-sliderMain.controller.control = sliderThumbs;
+    sliderThumbs.controller.control = sliderMain;
+    sliderMain.controller.control = sliderThumbs;
+
+    const videos = document.querySelectorAll('video');
+
+    sliderMain.on('slideChange', () => {
+        for (let i = 0; i < videos.length; i++) {
+            videos[i].pause();
+        }
+    });
+
+
+
+
+
+
+
 } catch {
-    console.log('На данной странице нет слайдера')
+    console.log('На данной странице нет слайдера');
 }
