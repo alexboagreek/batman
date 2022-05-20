@@ -4,8 +4,8 @@
 
 ## Tehnology: 
 
-1. HTML, CSS, JS
-2. swiper.js
+* HTML, CSS, JS
+* swiper.js
 
 ## Figma:
 https://www.figma.com/file/uTUIrcwlFiMKwHHmWOwa6N/BATMAN-(Intensive)-(Copy)?node-id=0%3A1
