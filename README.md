@@ -1,6 +1,6 @@
 # The Batman | Promo
 
-## MethED [methed](methed.ru) intensive curse
+## [MethED](methed.ru) intensive curse
 
 ## Tehnology: 
 
